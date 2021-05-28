@@ -93,7 +93,7 @@ router.purge('/', function (req, res) {
 
 //GET ASSIGNED RIDER LOCATION FROM SPECIFIED DRIVER ID
 var googleDist = require('google-distance');
-googleDist.apiKey = 'AIzaSyBM1qHkpR39FOH6cSmgTStF_oGfpqheMQc';
+googleDist.apiKey = '<PERSONAL GOOGLE DIST API KEY GOES HERE>';
 router.get('/:id/assignedRider/location', function (req, res) {
     driver.findById(req.params.id, function (err, Driver) {//To get distance from rider to drivers
         var rider = require('./rider');
