@@ -1,12 +1,13 @@
-
+//Our mongoDb URI to connect to our database below
+//mongodb+srv://yoshi1:<teamyoshi>@myFirstDatabase.jf7rx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 var express = require('express');
 var app = express();
 var db = require('./db');
 module.exports = app;
 var DriverController = require('./DriverController');
-app.use('/drivers', DriverController);
+app.use('/driver', DriverController);
 var RiderController = require('./RiderController');
-app.use('/riders', RiderController);
+app.use('/rider', RiderController);
 
 //Google distance API variable is here, call on this when using.
 //https://www.npmjs.com/package/google-distance  <-- API's data page has good examples

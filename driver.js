@@ -4,13 +4,14 @@ var mongoose = require('mongoose');
 var DriverSchema = new mongoose.Schema({  
     firstName: String,
     lastName: String,
-    id: String,
     location: {
        lat: String, 
        lon: String
     },
     available: Boolean,
-    assignedRider:  String
+    assignedRider: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Rider' }],
+    averageRating : Number,
+    numberOfRatings : Number
 });
 mongoose.model('Driver', DriverSchema);
 module.exports = mongoose.model('Driver');
