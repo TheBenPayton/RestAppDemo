@@ -102,7 +102,7 @@ router.purge('/', function (req, res) {
 
 //GET DRIVERS WITHIN 10 MILES OF A SPECIFIED RIDER ID
 var googleDist = require('google-distance');
-googleDist.apiKey = 'AIzaSyBM1qHkpR39FOH6cSmgTStF_oGfpqheMQc';
+googleDist.apiKey = '<PERSONAL GOOGLE DIST API KEY GOES HERE>';
 router.get('/:id/nearbyDrivers', function (req, res) {
     rider.findById(req.params.id, function (err, Rider) {//To get distance from rider to drivers
         var driver = require('./driver');
