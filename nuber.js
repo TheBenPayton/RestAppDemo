@@ -1,5 +1,4 @@
-//Our mongoDb URI to connect to our database below
-//mongodb+srv://yoshi1:<teamyoshi>@myFirstDatabase.jf7rx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
 var express = require('express');
 var app = express();
 var db = require('./db');
